@@ -49,37 +49,46 @@
 //     labelrol.textContent=randomNum
 // }
 
-const mycheckBoxLabel=document.getElementById("myCheckBox")
-const mycheckBoxBtn=document.getElementById("myCheckBox")
+// const mycheckBoxLabel=document.getElementById("myCheckBox")
+// const mycheckBoxBtn=document.getElementById("myCheckBox")
 
-const labelVisa=document.getElementById("labelVisa")
-const visaBtn=document.getElementById("visaBtn")
+// const labelVisa=document.getElementById("labelVisa")
+// const visaBtn=document.getElementById("visaBtn")
 
-const labelPayPal=document.getElementById("labelPayPal")
-const payPalBtn=document.getElementById("payPalBtn")
-const subResult=document.getElementById("subResult")
+// const labelPayPal=document.getElementById("labelPayPal")
+// const payPalBtn=document.getElementById("payPalBtn")
+// const subResult=document.getElementById("subResult")
 
-const submitCheckBtn=document.getElementById("submitCheckBtn")
+// const submitCheckBtn=document.getElementById("submitCheckBtn")
 
-submitCheckBtn.onclick=function(){
+// submitCheckBtn.onclick=function(){
 
-    if(mycheckBoxBtn.checked){
-        subResult.textContent='All check'
+//     if(mycheckBoxBtn.checked){
+//         subResult.textContent='All check'
+//     }else{
+//         subResult.textContent='All no check'
+
+//     }
+//     if(visaBtn.checked){
+//         VisaResult.textContent='All check Visa'
+//     }else{
+//         VisaResult.textContent='All no check Visa'
+//     }
+
+// }
+
+const answer=Math.floor(Math.random()*10+1)
+let timeGuess=0;
+
+document.getElementById("submitButton").onclick=function(){
+    let guess = document.getElementById("gessField").value
+    timeGuess+=1;
+
+    if(guess == answer){
+        alert(`${answer} is the number . It took you ${timeGuess}` )
+    }else if(guess < answer) {
+        alert("to small")
     }else{
-        subResult.textContent='All no check'
-
+        alert("too large")
     }
-    if(visaBtn.checked){
-        VisaResult.textContent='All check Visa'
-    }else{
-        VisaResult.textContent='All no check Visa'
-    }
-
-}
-
-let day=1;
-switch(day){
-   case 1 :
-    console.log('1');
-     break;
 }

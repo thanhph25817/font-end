@@ -1,0 +1,1 @@
+let fruit=["a","o"]
