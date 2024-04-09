@@ -1,11 +1,34 @@
-class Car{
-    age=0;
+
+
+//setInterval()
+
+// let count =0;
+// let max=window.prompt("count up to what")
+// max=Number(max);
+
+// const myTime=setInterval(countUp,1000)
+
+// function countUp(){
+//     count+=1;
+//     console.log(count)
+//     if(count>=max){
+//         clearInterval(myTime);
+//     }
+// }
+
+//promise
+const promise=new Promise((resolve,reject)=>{
+
+});
+
+
+async function loadFile(){
+    let fileLoaded=true
+
+if(fileLoaded){
+    return "file load"
+}else{
+    throw "not loaded"
 }
-
-const car1=new Car();
-const car2=new Car();
-
-car1.age+=1;
-
-console.log(car1.age)
-console.log(car2.age)
+}
+loadFile().then(value=>console.log(value)).catch
